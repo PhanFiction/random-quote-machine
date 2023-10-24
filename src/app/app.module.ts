@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RandomQuoteMachineComponent } from './components/random-quote-machine/random-quote-machine.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RandomQuoteMachineComponent
   ],
   imports: [
     BrowserModule,
