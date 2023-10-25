@@ -1,49 +1,5 @@
-article {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-mint-green);
-  border-radius: 1rem;
-}
-
-.container {
-  margin: 3rem;
-}
-
-div h2 {
-  font-size: 2.2rem;
-  color: var(--color-russian-violet);
-  text-align: left;
-}
-
-div p {
-  text-align: right;
-}
-
-.social-media-container {
-  margin-top: 3rem;
-}
-
-.social-media-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.social-media {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-button {
-  border-radius: .5rem;
-  padding: .5rem;
-  background-color: transparent;
-  border: solid 1px;
-  transition: color 0.3s ease;
-}
-
-button:hover {
-  color: var(--color-russian-violet);
+div {
+  background-color: green;
+  width: 350px;
+  height: 350px;
 }
