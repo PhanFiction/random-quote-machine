@@ -9,6 +9,11 @@ article {
   margin: 3rem;
 }
 
+.quotes {
+  width: 40vw;
+  min-height: 30vh;
+}
+
 div h2 {
   font-size: 2.2rem;
   color: var(--color-russian-violet);
@@ -45,5 +50,6 @@ button {
 }
 
 button:hover {
-  color: var(--color-russian-violet);
+  color: var(--color-ucla-blue);
+  cursor: pointer;
 }

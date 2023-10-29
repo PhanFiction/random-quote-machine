@@ -9,12 +9,28 @@ import { QuoteService } from 'src/app/services/quote.service';
   styleUrls: ['./random-quote-machine.component.css']
 })
 export class RandomQuoteMachineComponent implements OnInit{
-
-  quotes!: Observable<Quote[]>;
+  data$: Observable<Quote[]> = new Observable<Quote[]>();
+  quotes: Quote[] = [];
+  quote: Quote | undefined;
+  index = 0;
 
   constructor(private quoteService: QuoteService) {}
 
+  nextQuote(): void {
+    this.index++;
+    if(this.index > this.quotes.length-1) {
+      this.index = 0;
+      this.quote = this.quotes[0];
+    }else {
+      this.quote = this.quotes[this.index];
+    }
+  }
+
   ngOnInit(): void {
-    this.quoteService.getQuotes().subscribe(data => console.log(data));
+    this.data$ = this.quoteService.getQuotes();
+    this.data$.subscribe(item => {
+      this.quotes = item;
+      this.quote = item[this.index];
+    });
   }
 }
