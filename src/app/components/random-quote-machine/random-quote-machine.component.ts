@@ -14,7 +14,7 @@ export class RandomQuoteMachineComponent implements OnInit{
   quote: Quote | undefined;
   index = 0;
 
-  constructor(private quoteService: QuoteService) {}
+  constructor(private quoteService: QuoteService) {};
 
   nextQuote(): void {
     this.index++;
